@@ -39,5 +39,5 @@ function setTime() {
     return setInterval(() => {
         n += 1;
         playSlide(n % size);
-    }, 1000);
+    }, 2000);
 }
