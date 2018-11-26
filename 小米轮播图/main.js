@@ -21,6 +21,14 @@ $('#main').on('mouseleave', function () {
     timer = setTime();
 });
 
+$(document).on('visibilitychange', function () {
+    if (document.hidden) {
+        window.clearInterval(timer)
+    } else {
+        timer = setTime();
+    }
+});
+
 function setTime() {
     return setInterval(function () {
         n++;
